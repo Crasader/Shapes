@@ -48,6 +48,7 @@
 		6DA4679C2205BE5500ACDAF7 /* GameOverLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DA4679A2205BE5500ACDAF7 /* GameOverLayer.cpp */; };
 		6DA5B4D32207E1210083319F /* CSVFileCreate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DA5B4D12207E1210083319F /* CSVFileCreate.cpp */; };
 		6DA5B4D9220803A30083319F /* Different Heaven.mp3.csv in Resources */ = {isa = PBXBuildFile; fileRef = 6DA5B4D8220803A30083319F /* Different Heaven.mp3.csv */; };
+		6DA5B4E0220812A40083319F /* CSVFileLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DA5B4DE220812A40083319F /* CSVFileLoader.cpp */; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
@@ -151,6 +152,8 @@
 		6DA5B4D12207E1210083319F /* CSVFileCreate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CSVFileCreate.cpp; sourceTree = "<group>"; };
 		6DA5B4D22207E1210083319F /* CSVFileCreate.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CSVFileCreate.hpp; sourceTree = "<group>"; };
 		6DA5B4D8220803A30083319F /* Different Heaven.mp3.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Different Heaven.mp3.csv"; sourceTree = "<group>"; };
+		6DA5B4DE220812A40083319F /* CSVFileLoader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CSVFileLoader.cpp; sourceTree = "<group>"; };
+		6DA5B4DF220812A40083319F /* CSVFileLoader.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CSVFileLoader.hpp; sourceTree = "<group>"; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -306,6 +309,8 @@
 				6DA467A02205D7F300ACDAF7 /* StageSelect */,
 				6DA467A32205D80D00ACDAF7 /* GameOver */,
 				6DA4679E2205D7DE00ACDAF7 /* Credit */,
+				6DA5B4DE220812A40083319F /* CSVFileLoader.cpp */,
+				6DA5B4DF220812A40083319F /* CSVFileLoader.hpp */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -568,6 +573,7 @@
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				6DA4678722059DF300ACDAF7 /* BaseLayer.cpp in Sources */,
 				6DA467962205B87E00ACDAF7 /* GameLayer.cpp in Sources */,
+				6DA5B4E0220812A40083319F /* CSVFileLoader.cpp in Sources */,
 				1AF87B8A1F6F7822007BE51C /* main.m in Sources */,
 				6DA4678A22059F5D00ACDAF7 /* TitleLayer.cpp in Sources */,
 				6DA467932205B74300ACDAF7 /* StageSelectLayer.cpp in Sources */,

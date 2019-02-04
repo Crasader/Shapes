@@ -1,7 +1,10 @@
 #include "CSVFileCreate.hpp"
+#include "CSVFileLoader.hpp"
+
 #include <fstream>
 #include "SimpleAudioEngine.h"
 #include <cassert>
+#include <iomanip>
 
 using namespace CocosDenshion;
 
@@ -73,7 +76,8 @@ void CSVFileCreate::update(float dt)
 {
     if(isTouched)
     {
-        ofs << mTime << ",";
+        ofs << fixed;
+        ofs << setprecision(2)<< mTime << ",";
         ofs.flush();
         isTouched=false;
     }
@@ -99,6 +103,12 @@ bool CSVFileCreate::onTouchBegan(Touch* touch,Event* event)
 {
     isTouched=true;
     cout << "time is: " << mTime <<endl;
+    list<double> timingList=loadCSVFile("Different Heaven.mp3.csv");
+    list<double>::iterator it;
+    for(it=timingList.begin();it!=timingList.end();it++)
+    {
+        cout << "timingList is :" << *it <<endl;
+    }
     return true;
 }
 
