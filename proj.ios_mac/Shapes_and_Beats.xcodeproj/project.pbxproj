@@ -46,6 +46,8 @@
 		6DA467962205B87E00ACDAF7 /* GameLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DA467942205B87E00ACDAF7 /* GameLayer.cpp */; };
 		6DA467992205BB4A00ACDAF7 /* ResultLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DA467972205BB4A00ACDAF7 /* ResultLayer.cpp */; };
 		6DA4679C2205BE5500ACDAF7 /* GameOverLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DA4679A2205BE5500ACDAF7 /* GameOverLayer.cpp */; };
+		6DA5B4D32207E1210083319F /* CSVFileCreate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DA5B4D12207E1210083319F /* CSVFileCreate.cpp */; };
+		6DA5B4D9220803A30083319F /* Different Heaven.mp3.csv in Resources */ = {isa = PBXBuildFile; fileRef = 6DA5B4D8220803A30083319F /* Different Heaven.mp3.csv */; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
@@ -146,6 +148,9 @@
 		6DA467982205BB4A00ACDAF7 /* ResultLayer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ResultLayer.hpp; sourceTree = "<group>"; };
 		6DA4679A2205BE5500ACDAF7 /* GameOverLayer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameOverLayer.cpp; sourceTree = "<group>"; };
 		6DA4679B2205BE5500ACDAF7 /* GameOverLayer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameOverLayer.hpp; sourceTree = "<group>"; };
+		6DA5B4D12207E1210083319F /* CSVFileCreate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CSVFileCreate.cpp; sourceTree = "<group>"; };
+		6DA5B4D22207E1210083319F /* CSVFileCreate.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CSVFileCreate.hpp; sourceTree = "<group>"; };
+		6DA5B4D8220803A30083319F /* Different Heaven.mp3.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Different Heaven.mp3.csv"; sourceTree = "<group>"; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -282,6 +287,7 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6DA5B4D52207FADC0083319F /* musicfiles */,
 				6D07CDC522042A9300F42F16 /* BGM */,
 				521A8EA819F11F5000D177D7 /* fonts */,
 			);
@@ -292,6 +298,8 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				6DA5B4D12207E1210083319F /* CSVFileCreate.cpp */,
+				6DA5B4D22207E1210083319F /* CSVFileCreate.hpp */,
 				6DA467A42205D81600ACDAF7 /* Base */,
 				6DA4679D2205D66D00ACDAF7 /* Title */,
 				6DA4679F2205D7E600ACDAF7 /* TitleOption */,
@@ -409,6 +417,14 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		6DA5B4D52207FADC0083319F /* musicfiles */ = {
+			isa = PBXGroup;
+			children = (
+				6DA5B4D8220803A30083319F /* Different Heaven.mp3.csv */,
+			);
+			path = musicfiles;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -522,6 +538,7 @@
 				6D07CDC922042C7800F42F16 /* Different Heaven.mp3 in Resources */,
 				6D07CDCD22042E1300F42F16 /* Disfigure.mp3 in Resources */,
 				6D07CDCC22042E1300F42F16 /* Spektrem.mp3 in Resources */,
+				6DA5B4D9220803A30083319F /* Different Heaven.mp3.csv in Resources */,
 				1AF87B881F6F781D007BE51C /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -554,6 +571,7 @@
 				1AF87B8A1F6F7822007BE51C /* main.m in Sources */,
 				6DA4678A22059F5D00ACDAF7 /* TitleLayer.cpp in Sources */,
 				6DA467932205B74300ACDAF7 /* StageSelectLayer.cpp in Sources */,
+				6DA5B4D32207E1210083319F /* CSVFileCreate.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
