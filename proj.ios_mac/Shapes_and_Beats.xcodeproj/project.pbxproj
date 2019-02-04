@@ -49,6 +49,9 @@
 		6DA5B4D32207E1210083319F /* CSVFileCreate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DA5B4D12207E1210083319F /* CSVFileCreate.cpp */; };
 		6DA5B4D9220803A30083319F /* Different Heaven.mp3.csv in Resources */ = {isa = PBXBuildFile; fileRef = 6DA5B4D8220803A30083319F /* Different Heaven.mp3.csv */; };
 		6DA5B4E0220812A40083319F /* CSVFileLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DA5B4DE220812A40083319F /* CSVFileLoader.cpp */; };
+		6DAD305C22088FB200EE530A /* Obstracle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DAD305A22088FB200EE530A /* Obstracle.cpp */; };
+		6DAD305F2208929300EE530A /* LineObstracle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DAD305D2208929300EE530A /* LineObstracle.cpp */; };
+		6DAD30622208A79300EE530A /* ObstracleFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DAD30602208A79300EE530A /* ObstracleFactory.cpp */; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
@@ -154,6 +157,12 @@
 		6DA5B4D8220803A30083319F /* Different Heaven.mp3.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Different Heaven.mp3.csv"; sourceTree = "<group>"; };
 		6DA5B4DE220812A40083319F /* CSVFileLoader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CSVFileLoader.cpp; sourceTree = "<group>"; };
 		6DA5B4DF220812A40083319F /* CSVFileLoader.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CSVFileLoader.hpp; sourceTree = "<group>"; };
+		6DAD305A22088FB200EE530A /* Obstracle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Obstracle.cpp; sourceTree = "<group>"; };
+		6DAD305B22088FB200EE530A /* Obstracle.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Obstracle.hpp; sourceTree = "<group>"; };
+		6DAD305D2208929300EE530A /* LineObstracle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LineObstracle.cpp; sourceTree = "<group>"; };
+		6DAD305E2208929300EE530A /* LineObstracle.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LineObstracle.hpp; sourceTree = "<group>"; };
+		6DAD30602208A79300EE530A /* ObstracleFactory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ObstracleFactory.cpp; sourceTree = "<group>"; };
+		6DAD30612208A79300EE530A /* ObstracleFactory.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ObstracleFactory.hpp; sourceTree = "<group>"; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -301,16 +310,15 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				6DA5B4D12207E1210083319F /* CSVFileCreate.cpp */,
-				6DA5B4D22207E1210083319F /* CSVFileCreate.hpp */,
+				6DA5B4E1220820770083319F /* Tools */,
 				6DA467A42205D81600ACDAF7 /* Base */,
 				6DA4679D2205D66D00ACDAF7 /* Title */,
 				6DA4679F2205D7E600ACDAF7 /* TitleOption */,
 				6DA467A02205D7F300ACDAF7 /* StageSelect */,
+				6DA467A12205D7FB00ACDAF7 /* Game */,
+				6DA467A22205D80400ACDAF7 /* Result */,
 				6DA467A32205D80D00ACDAF7 /* GameOver */,
 				6DA4679E2205D7DE00ACDAF7 /* Credit */,
-				6DA5B4DE220812A40083319F /* CSVFileLoader.cpp */,
-				6DA5B4DF220812A40083319F /* CSVFileLoader.hpp */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -376,21 +384,25 @@
 		6DA467A02205D7F300ACDAF7 /* StageSelect */ = {
 			isa = PBXGroup;
 			children = (
-				6DA467A22205D80400ACDAF7 /* Result */,
-				6DA467A12205D7FB00ACDAF7 /* GameMain */,
 				6DA467912205B74300ACDAF7 /* StageSelectLayer.cpp */,
 				6DA467922205B74300ACDAF7 /* StageSelectLayer.hpp */,
 			);
 			path = StageSelect;
 			sourceTree = "<group>";
 		};
-		6DA467A12205D7FB00ACDAF7 /* GameMain */ = {
+		6DA467A12205D7FB00ACDAF7 /* Game */ = {
 			isa = PBXGroup;
 			children = (
 				6DA467942205B87E00ACDAF7 /* GameLayer.cpp */,
 				6DA467952205B87E00ACDAF7 /* GameLayer.hpp */,
+				6DAD305A22088FB200EE530A /* Obstracle.cpp */,
+				6DAD305B22088FB200EE530A /* Obstracle.hpp */,
+				6DAD305D2208929300EE530A /* LineObstracle.cpp */,
+				6DAD305E2208929300EE530A /* LineObstracle.hpp */,
+				6DAD30602208A79300EE530A /* ObstracleFactory.cpp */,
+				6DAD30612208A79300EE530A /* ObstracleFactory.hpp */,
 			);
-			path = GameMain;
+			path = Game;
 			sourceTree = "<group>";
 		};
 		6DA467A22205D80400ACDAF7 /* Result */ = {
@@ -428,6 +440,17 @@
 				6DA5B4D8220803A30083319F /* Different Heaven.mp3.csv */,
 			);
 			path = musicfiles;
+			sourceTree = "<group>";
+		};
+		6DA5B4E1220820770083319F /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				6DA5B4D12207E1210083319F /* CSVFileCreate.cpp */,
+				6DA5B4D22207E1210083319F /* CSVFileCreate.hpp */,
+				6DA5B4DE220812A40083319F /* CSVFileLoader.cpp */,
+				6DA5B4DF220812A40083319F /* CSVFileLoader.hpp */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -565,13 +588,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DA467992205BB4A00ACDAF7 /* ResultLayer.cpp in Sources */,
+				6DAD305C22088FB200EE530A /* Obstracle.cpp in Sources */,
 				6DA467902205B61100ACDAF7 /* TitleOptionLayer.cpp in Sources */,
 				1AF87B781F6F77F7007BE51C /* AppController.mm in Sources */,
 				6DA4679C2205BE5500ACDAF7 /* GameOverLayer.cpp in Sources */,
+				6DAD30622208A79300EE530A /* ObstracleFactory.cpp in Sources */,
 				6DA4678D2205B1FC00ACDAF7 /* CreditLayer.cpp in Sources */,
 				1AF87B8B1F6F782A007BE51C /* RootViewController.mm in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				6DA4678722059DF300ACDAF7 /* BaseLayer.cpp in Sources */,
+				6DAD305F2208929300EE530A /* LineObstracle.cpp in Sources */,
 				6DA467962205B87E00ACDAF7 /* GameLayer.cpp in Sources */,
 				6DA5B4E0220812A40083319F /* CSVFileLoader.cpp in Sources */,
 				1AF87B8A1F6F7822007BE51C /* main.m in Sources */,

@@ -1,6 +1,7 @@
 #include "AppDelegate.h"
 #include "TitleLayer.hpp"
 #include "CSVFileCreate.hpp"
+#include "GameLayer.hpp"
 // #define USE_AUDIO_ENGINE 1
 // #define USE_SIMPLE_AUDIO_ENGINE 1
 
@@ -91,8 +92,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
     register_all_packages();
 
     //Scene* scene=GameSequence::TitleLayer::createScene();
-    Scene* scene=CSVFileCreate::createScene("Different Heaven.mp3");
-    
+    //Scene* scene=CSVFileCreate::createScene("Different Heaven.mp3");
+    Scene* scene=GameSequence::GameLayer::createScene();
     
     director->runWithScene(scene);
 

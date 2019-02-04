@@ -3,8 +3,10 @@
 #include "ResultLayer.hpp"
 #include "GameOverLayer.hpp"
 
-using namespace GameSequence;
+#include "ObstracleFactory.hpp"
 
+using namespace GameSequence;
+using namespace Game;
 Scene* GameLayer::createScene()
 {
     Scene* scene=Scene::create();
@@ -36,6 +38,7 @@ void GameLayer::onEnter()
 {
     BaseLayer::onEnter();
     
+    /*
     auto label = Label::createWithTTF("GameScene Layer", "fonts/Marker Felt.ttf", 24);
     label->setPosition(Vec2(200,300));
     addChild(label);
@@ -62,8 +65,30 @@ void GameLayer::onEnter()
     Size windowSize=Director::getInstance()->getVisibleSize();
     menu->setPosition(Vec2(windowSize.width/2,0));
     addChild(menu);
+     */
+    ObstracleFactory* factory=ObstracleFactory::getInstance();
+    Obstracle* lineObstracle=factory->generateObstracle(O_Line,Vec2(200,200));
+    mObstracleList.push_back(lineObstracle);
+    cout <<mObstracleList.size()<< endl;
+    addChild(lineObstracle);
+    
+    Obstracle* lineObstracle2=factory->generateObstracle(O_Line,Vec2(300,200));
+    mObstracleList.push_back(lineObstracle2);
+    cout <<mObstracleList.size()<< endl;
+    addChild(lineObstracle2);
+    
+    
+    scheduleUpdate();
 }
 
+void GameLayer::update(float dt)
+{
+    cout << "gameLayer::update" <<endl;
+    for(Obstracle* obst : mObstracleList)
+    {
+        obst->update();
+    }
+}
 GameLayer::GameLayer():
 BaseLayer::BaseLayer()
 {
@@ -72,7 +97,9 @@ BaseLayer::BaseLayer()
 
 GameLayer::~GameLayer()
 {
-    
+    cout << "~GameLayer" <<endl;
+    mObstracleList.clear();
+    ObstracleFactory::destroy();
 }
 
 void GameLayer::toStageSelect(Ref* sender)

@@ -103,12 +103,7 @@ bool CSVFileCreate::onTouchBegan(Touch* touch,Event* event)
 {
     isTouched=true;
     cout << "time is: " << mTime <<endl;
-    list<double> timingList=loadCSVFile("Different Heaven.mp3.csv");
-    list<double>::iterator it;
-    for(it=timingList.begin();it!=timingList.end();it++)
-    {
-        cout << "timingList is :" << *it <<endl;
-    }
+    
     return true;
 }
 
