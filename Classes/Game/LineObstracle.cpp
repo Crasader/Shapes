@@ -20,7 +20,7 @@ bool LineObstracle::init(Vec2 initPos)
     autorelease();
     
     setTextureRect(Rect(0,0,mWidth,mHeight));
-    setColor(Color3B(150,30,30));
+    setColor(Color3B(200,30,30));
     setPosition(initPos);
     cout << "in init"<<endl;
     return true;
@@ -31,15 +31,18 @@ LineObstracle::~LineObstracle()
     
 }
 
+void LineObstracle::doAnimation()
+{
+    auto fadein=FadeIn::create(0.2f);
+    int sign=cocos2d::random()%2 *2 -1;
+    Vec2 pos=getPosition();
+    auto move=MoveTo::create(5.0f,Vec2(pos.x,-100));
+    auto rotate=RotateBy::create(5.0f,sign*720);
+   // auto tint=TintTo::create(1.0f,0.0f,0.0f,0.0f);
+    auto spawn=Spawn::create(fadein,move,rotate,nullptr);
+    //auto sequence=Sequence::create(fadein,spawn,nullptr);
+    this->runAction(spawn);
+}
 void LineObstracle::update()
 {
-    cout << "in update"<<endl;
-    
-    Vec2 position=getPosition();
-    position.y+=5;
-    //cout << _position.y <<endl;
-    this->setPosition(position);
-    
-    //auto up=MoveTo::create(3.0f,Vec2(300,1000));
-    //this->runAction(up);
 }

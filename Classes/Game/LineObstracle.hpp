@@ -13,10 +13,12 @@ namespace Game
         
         static LineObstracle* create(Vec2 initPos);
         bool init(Vec2 initPos);
+        void doAnimation();
         virtual void update();
         
     protected:
-        float mWidth=20,mHeight=20;
+        float mWidth=30;
+        float mHeight=mWidth;
     };
 }
 

@@ -46,6 +46,7 @@
 		6DA467962205B87E00ACDAF7 /* GameLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DA467942205B87E00ACDAF7 /* GameLayer.cpp */; };
 		6DA467992205BB4A00ACDAF7 /* ResultLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DA467972205BB4A00ACDAF7 /* ResultLayer.cpp */; };
 		6DA4679C2205BE5500ACDAF7 /* GameOverLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DA4679A2205BE5500ACDAF7 /* GameOverLayer.cpp */; };
+		6DA49117220968F2003CA56D /* CircleObstracle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DA49115220968F2003CA56D /* CircleObstracle.cpp */; };
 		6DA5B4D32207E1210083319F /* CSVFileCreate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DA5B4D12207E1210083319F /* CSVFileCreate.cpp */; };
 		6DA5B4D9220803A30083319F /* Different Heaven.mp3.csv in Resources */ = {isa = PBXBuildFile; fileRef = 6DA5B4D8220803A30083319F /* Different Heaven.mp3.csv */; };
 		6DA5B4E0220812A40083319F /* CSVFileLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DA5B4DE220812A40083319F /* CSVFileLoader.cpp */; };
@@ -152,6 +153,8 @@
 		6DA467982205BB4A00ACDAF7 /* ResultLayer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ResultLayer.hpp; sourceTree = "<group>"; };
 		6DA4679A2205BE5500ACDAF7 /* GameOverLayer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameOverLayer.cpp; sourceTree = "<group>"; };
 		6DA4679B2205BE5500ACDAF7 /* GameOverLayer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameOverLayer.hpp; sourceTree = "<group>"; };
+		6DA49115220968F2003CA56D /* CircleObstracle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CircleObstracle.cpp; sourceTree = "<group>"; };
+		6DA49116220968F2003CA56D /* CircleObstracle.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CircleObstracle.hpp; sourceTree = "<group>"; };
 		6DA5B4D12207E1210083319F /* CSVFileCreate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CSVFileCreate.cpp; sourceTree = "<group>"; };
 		6DA5B4D22207E1210083319F /* CSVFileCreate.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CSVFileCreate.hpp; sourceTree = "<group>"; };
 		6DA5B4D8220803A30083319F /* Different Heaven.mp3.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Different Heaven.mp3.csv"; sourceTree = "<group>"; };
@@ -401,6 +404,8 @@
 				6DAD305E2208929300EE530A /* LineObstracle.hpp */,
 				6DAD30602208A79300EE530A /* ObstracleFactory.cpp */,
 				6DAD30612208A79300EE530A /* ObstracleFactory.hpp */,
+				6DA49115220968F2003CA56D /* CircleObstracle.cpp */,
+				6DA49116220968F2003CA56D /* CircleObstracle.hpp */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -598,6 +603,7 @@
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				6DA4678722059DF300ACDAF7 /* BaseLayer.cpp in Sources */,
 				6DAD305F2208929300EE530A /* LineObstracle.cpp in Sources */,
+				6DA49117220968F2003CA56D /* CircleObstracle.cpp in Sources */,
 				6DA467962205B87E00ACDAF7 /* GameLayer.cpp in Sources */,
 				6DA5B4E0220812A40083319F /* CSVFileLoader.cpp in Sources */,
 				1AF87B8A1F6F7822007BE51C /* main.m in Sources */,

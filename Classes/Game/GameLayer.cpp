@@ -38,6 +38,10 @@ void GameLayer::onEnter()
 {
     BaseLayer::onEnter();
     
+    SimpleAudioEngine* engine=SimpleAudioEngine::getInstance();
+    engine->preloadBackgroundMusic("Different Heaven.mp3");
+    engine->setBackgroundMusicVolume(1.0f);
+    
     /*
     auto label = Label::createWithTTF("GameScene Layer", "fonts/Marker Felt.ttf", 24);
     label->setPosition(Vec2(200,300));
@@ -66,31 +70,67 @@ void GameLayer::onEnter()
     menu->setPosition(Vec2(windowSize.width/2,0));
     addChild(menu);
      */
+    /*
     ObstracleFactory* factory=ObstracleFactory::getInstance();
-    Obstracle* lineObstracle=factory->generateObstracle(O_Line,Vec2(200,200));
+    Obstracle* lineObstracle=factory->generateObstracle(O_Line,Vec2(200,200),3.0);
     mObstracleList.push_back(lineObstracle);
     cout <<mObstracleList.size()<< endl;
     addChild(lineObstracle);
     
-    Obstracle* lineObstracle2=factory->generateObstracle(O_Line,Vec2(300,200));
-    mObstracleList.push_back(lineObstracle2);
+    */
+    Obstracle* circleObstracle=ObstracleFactory::
+    getInstance()->generateObstracle(O_Circle,Vec2(300,200));
+    mObstracleList.push_back(circleObstracle);
     cout <<mObstracleList.size()<< endl;
-    addChild(lineObstracle2);
+    addChild(circleObstracle);
+    circleObstracle->doAnimation();
     
     
+    engine->playBackgroundMusic("Different Heaven.mp3",false);
     scheduleUpdate();
 }
 
 void GameLayer::update(float dt)
 {
     cout << "gameLayer::update" <<endl;
-    for(Obstracle* obst : mObstracleList)
+    mPassedTime+=dt;
+    
+    
+    if(ObstracleFactory::getInstance()->checkGenerateTiming(mPassedTime))
     {
-        obst->update();
+        int initPosX=cocos2d::random<int>(20,620);
+        int initPosY=cocos2d::random<int>(100,1100);
+        //Obstracle* obstracle=ObstracleFactory::getInstance()
+        //->generateObstracle(O_Line,Vec2(initPosX,1100));
+        Obstracle* obstracle=ObstracleFactory::getInstance()
+        ->generateObstracle(O_Circle,Vec2(initPosX,initPosY));
+        mObstracleList.push_back(obstracle);
+        cout <<mObstracleList.size()<< endl;
+        addChild(obstracle);
+        obstracle->doAnimation();
     }
+    
+    list<Obstracle*>::iterator it;
+    for(it=mObstracleList.begin();it!=mObstracleList.end(); )
+    {
+        if((*it)->isActive(Director::getInstance()->getVisibleSize()))
+        {
+            (*it)->update();
+            it++;
+        }
+        else
+        {
+            cout << "remove"<<endl;
+            (*it)->removeFromParentAndCleanup(true);
+            it=mObstracleList.erase(it);
+        }
+    }
+    cout << "size: " << mObstracleList.size() <<endl;
+    
 }
 GameLayer::GameLayer():
-BaseLayer::BaseLayer()
+BaseLayer::BaseLayer(),
+mPassedTime(0)
 {
     
 }

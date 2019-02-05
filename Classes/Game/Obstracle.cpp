@@ -23,8 +23,9 @@ void Obstracle::update()
 }
 bool Obstracle::isActive(Size windowSize) const
 {
-    if(_position.x<0 || _position.x>windowSize.width ||
-       _position.y<0 || _position.y>windowSize.height)
+    Vec2 pos=getPosition();
+    if(pos.x<0 || pos.x>windowSize.width ||
+       pos.y<0 || pos.y>windowSize.height)
         return false;
     
     return true;

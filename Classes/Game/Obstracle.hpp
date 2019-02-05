@@ -15,8 +15,9 @@ namespace Game
         Obstracle();
         virtual ~Obstracle();
         virtual bool init();
+        virtual void doAnimation()=0;
         virtual void update()=0;
-        bool isActive(Size windowSize) const;
+        virtual bool isActive(Size windowSize) const;
     protected:
         bool mActive;
     };

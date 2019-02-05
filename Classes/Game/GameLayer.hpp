@@ -31,6 +31,7 @@ namespace GameSequence
         virtual void onTouchEnded(Touch* touch,Event* event);
         virtual void onTouchCancelled(Touch* touch,Event* event);
     private:
+        float mPassedTime;
         list<Game::Obstracle*> mObstracleList;
         
         GameLayer();

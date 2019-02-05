@@ -3,10 +3,14 @@
 
 #include "cocos2d.h"
 #include "ui/CocosGUI.h"
+#include "audio/include/AudioEngine.h"
+#include "audio/include/SimpleAudioEngine.h"
 #include <iostream>
 using namespace cocos2d;
 using namespace std;
 using namespace ui;
+using namespace CocosDenshion;
+using namespace cocos2d::experimental;
 
 namespace GameSequence
 {
