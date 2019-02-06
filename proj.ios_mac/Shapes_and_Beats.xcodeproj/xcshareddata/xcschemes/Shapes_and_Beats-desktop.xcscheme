@@ -46,7 +46,7 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
-      useCustomWorkingDirectory = "YES"
+      useCustomWorkingDirectory = "NO"
       customWorkingDirectory = "/Users/sugiharayuukana/cocos2d-x/Game/Shapes_and_Beats"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"

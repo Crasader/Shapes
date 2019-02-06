@@ -43,12 +43,14 @@ Obstracle* ObstracleFactory::generateObstracle(Obstracles type,Vec2 initPos)
 
 bool ObstracleFactory::checkGenerateTiming(float passedTime)
 {
+    
     cout << "it: "<< (*mIt) <<endl;
     cout << "passedTime: " <<passedTime <<endl;
     if((*mIt)<=passedTime && mIt!=mTimingList.end())
     {
         return true;
     }
+    
     return false;
 }
 

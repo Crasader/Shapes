@@ -70,9 +70,9 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // Set the design resolution
     glview->setDesignResolutionSize(designResolutionSize.width, designResolutionSize.height, ResolutionPolicy::FIXED_WIDTH);
    
-    //Scene* scene=GameSequence::TitleLayer::createScene();
+    Scene* scene=GameSequence::TitleLayer::createScene();
     //Scene* scene=CSVFileCreate::createScene("Different Heaven.mp3");
-    Scene* scene=GameSequence::GameLayer::createScene();
+    //Scene* scene=GameSequence::GameLayer::createScene();
     
     director->runWithScene(scene);
 

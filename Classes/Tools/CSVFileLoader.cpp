@@ -10,7 +10,9 @@ using namespace std;
 list<double> loadCSVFile(string csvFilename)
 {
     string fullPath="/Users/sugiharayuukana/cocos2d-x/Game/Shapes_and_Beats/Resources/musicfiles/"+csvFilename;
-    ifstream ifs(fullPath);
+    //ifstream ifs(fullPath);
+    string path=cocos2d::FileUtils::getInstance()->fullPathForFilename(csvFilename);
+    ifstream ifs(path);
     if(!ifs)
     {
         cout << fullPath << "は見つかりませんでした." <<endl;
